@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Drake Fan Page</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drake — Official Fan Page</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -12,27 +11,29 @@
       --accent: #38bdf8;
       --card: #1e293b;
       --radius: 14px;
-      --shadow: 0 8px 20px rgba(0,0,0,0.3);
+      --shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: "Segoe UI", Roboto, sans-serif;
+      font-family: "Inter", "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
     nav {
       background: #020617;
       position: sticky;
       top: 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .nav-inner {
-      max-width: 960px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 14px 20px;
       display: flex;
@@ -43,27 +44,207 @@
     .brand {
       color: var(--accent);
       font-weight: 700;
-      font-size: 20px;
+      font-size: 22px;
       text-decoration: none;
+      letter-spacing: 1px;
     }
 
     .links a {
       color: var(--text);
       text-decoration: none;
-      margin-left: 14px;
+      margin-left: 16px;
       padding: 6px 10px;
       border-radius: 8px;
-      transition: 0.2s;
+      transition: 0.25s;
     }
 
     .links a:hover {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       color: var(--accent);
     }
 
-    .hero {
-      max-width: 960px;
-      margin: 40px auto;
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("img/drake1.jpg") center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
       padding: 0 20px;
+    }
+
+    header h1 {
+      font-size: clamp(32px, 5vw, 58px);
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      max-width: 700px;
+      color: #cbd5e1;
+      font-size: 1.2rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    section {
+      background: var(--card);
+      padding: 30px 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 14px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .bio p {
+      color: #cbd5e1;
+      margin-bottom: 10px;
+    }
+
+    .albums ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .albums li {
+      margin-bottom: 10px;
+    }
+
+    .albums strong {
+      color: var(--accent);
+    }
+
+    .gallery {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .contact p {
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      color: #94a3b8;
+      padding: 40px 20px 60px;
+      border-top: 1px solid #334155;
+    }
+
+    @media (max-width: 700px) {
+      header { height: 65vh; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#">Drake Fan Page</a>
+      <div class="links">
+        <a href="#bio">Biography</a>
+        <a href="#albums">Albums</a>
+        <a href="#awards">Awards</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div>
+      <h1>Drake</h1>
+      <p>Canadian rapper, singer, and global icon known for blending hip-hop and R&B. From “Take Care” to “Certified Lover Boy,” Drake has shaped the sound of a generation.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="bio" class="bio">
+      <h2>Biography</h2>
+      <p><strong>Aubrey Drake Graham</strong>, known professionally as Drake, was born on October 24, 1986, in Toronto, Canada. He first gained recognition as an actor on the teen drama series <em>Degrassi: The Next Generation</em> before transitioning into music.</p>
+      <p>Drake’s breakthrough came with his 2009 mixtape <em>So Far Gone</em>. Since then, he’s become one of the most successful and influential artists in contemporary music, known for his introspective lyrics, melodic flow, and innovative blend of rap and R&B.</p>
+      <p>With his label <strong>OVO Sound</strong>, Drake has also become a major figure in the music industry, discovering and supporting new talent.</p>
+    </section>
+
+    <section id="albums" class="albums">
+      <h2>Discography Highlights</h2>
+      <ul>
+        <li><strong>Thank Me Later</strong> (2010) — Debut album featuring hits like “Find Your Love.”</li>
+        <li><strong>Take Care</strong> (2011) — A Grammy-winning album blending atmospheric production and emotional depth.</li>
+        <li><strong>Nothing Was the Same</strong> (2013) — Included “Started From the Bottom” and “Hold On, We’re Going Home.”</li>
+        <li><strong>Views</strong> (2016) — Featuring the global hit “One Dance.”</li>
+        <li><strong>Scorpion</strong> (2018) — Home to “God’s Plan” and “In My Feelings.”</li>
+        <li><strong>Certified Lover Boy</strong> (2021) — Another chart-topping success.</li>
+        <li><strong>For All the Dogs</strong> (2023) — His latest project exploring new sonic directions.</li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2>Awards & Achievements</h2>
+      <p>Drake has received <strong>over 190 major awards</strong>, including:</p>
+      <ul>
+        <li>5 Grammy Awards</li>
+        <li>34 Billboard Music Awards</li>
+        <li>3 Juno Awards</li>
+        <li>MTV and BET Awards</li>
+      </ul>
+      <p>He holds numerous Billboard chart records, including being one of the most-streamed artists of all time.</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="img/drake2.jpg" alt="Drake performing live">
+        <img src="img/drake3.jpg" alt="Drake studio session">
+        <img src="img/drake4.jpg" alt="Drake on stage">
+        <img src="img/drake5.jpg" alt="Drake promotional shoot">
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>This is a non-official fan page created for educational and entertainment purposes.</p>
+      <p>Follow Drake on his official channels:</p>
+      <p>
+        🔗 <a href="https://www.instagram.com/champagnepapi" target="_blank" style="color: var(--accent); text-decoration: none;">Instagram</a><br>
+        🔗 <a href="https://twitter.com/Drake" target="_blank" style="color: var(--accent); text-decoration: none;">Twitter</a><br>
+        🔗 <a href="https://www.youtube.com/drakeofficial" target="_blank" style="color: var(--accent); text-decoration: none;">YouTube</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> — Drake Fan Page (Unofficial) | Designed for GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
