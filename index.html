@@ -1,21 +1,69 @@
-<!DOCTYPE html> 
-<html lang="es"> 
-<head> 
-     <meta charset="UTF-8"> 
-     <title>Mi primera web</title> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drake Fan Page</title>
 
-     <style> 
+  <style>
+    :root {
+      --bg: #0f172a;
+      --text: #e2e8f0;
+      --accent: #38bdf8;
+      --card: #1e293b;
+      --radius: 14px;
+      --shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
 
-body { 
-    background-color: lightblue; 
-} 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-     </style> 
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-</head> 
-<body> 
-     <h1>¡Hola mundo! 🌍</h1> 
-     <p>Esta es mi primera página creada con GitHub Pages.</p> 
+    nav {
+      background: #020617;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
 
-</body> 
-</html> 
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .links a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 14px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    .links a:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
